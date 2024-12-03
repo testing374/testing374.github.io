@@ -1,1 +1,43 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File selection</title>
+    
+    <style>
+
+      ol {
+        list-style: none;
+      }
+
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data">
+        <div>
+          <label for="image_uploads">Choose images to upload (PNG, JPG)</label>
+          <input
+            type="file"
+            id="image_uploads"
+            name="image_uploads"
+            accept=".jpg, .jpeg, .png"
+            multiple />
+        </div>
+        <div class="preview">
+          <p>No file selected yet</p>
+        </div>
+        <div>
+          <button>Submit</button>
+        </div>
+      </form>    
+</body>
+    <script src="/script.js"></script>
+</html>
+
+
+
