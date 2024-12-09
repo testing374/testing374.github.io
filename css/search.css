@@ -1,0 +1,159 @@
+
+main{
+    max-width: var(--widthL);
+    display: flex;
+    flex-direction: row;
+}
+
+main .divAB{
+    display: flex;
+    flex-direction: row;
+}
+
+main .divA{
+    flex: 0 0 200px;
+    padding: 20px;
+}
+
+main .divB{
+    flex: 0 1 auto;
+}
+
+main .divB nav{
+    padding: 10px;
+    display: flex;
+}
+
+main .divB nav>code{
+    flex: 1 1 auto;
+}
+
+main .divB #sortBtn{
+    flex: 0 0 140px;
+    border: 1px grey solid;
+    text-align: center;
+    position: relative;
+    background-color:whitesmoke;
+    min-height: 30px;
+    align-content: center;
+}
+main .divB #sortBtn:hover{
+    border: 1px black solid;
+    cursor: pointer;
+}
+
+main #sortBtn div{
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border: 1px solid black;
+    width: 140px;
+    display: none;
+    background-color:whitesmoke;
+}
+
+#sortBtn span:hover{
+    background-color:blanchedalmond;
+}
+
+main .pList{
+    flex: 0 1 800px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+main .pList div{
+   /*  max-width: 250px; */
+    flex: 0 1 250px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+main .pList div:hover{
+    border: 1px grey solid;
+}
+
+main .pList div>img{
+    max-width: 250px;
+}
+
+body > main > div {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.2;
+}
+
+.divA .brand, .divA .type, .divA .size, .divA .price, .divA #filterBtn{
+    border: 1px outset blue;
+    box-shadow: 0 3px 5px lightblue;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.divA #filterBtn{
+    text-align: center;
+    padding: 0px;
+    height: 40px;
+    align-content: center;
+    border-radius: 0px;
+}
+.divA #filterBtn:hover{
+    background-color:aliceblue;
+    border-width: 2px;
+}
+
+.divA .size .box>span{
+    border: 1px outset blue;
+ 
+    padding: 1px;
+    margin: 2px;
+    border-radius: 1px;
+}
+.divA .size .box>span:hover{
+    box-shadow: 0 3px 5px lightblue;
+    border: 2px outset black;
+    cursor: pointer;
+}
+
+.divA > div > details > div > div {
+    border: 1px solid black;
+    margin: 3px;
+}
+
+#brand, #minp, #maxp {
+    border: 1px solid black;
+    margin: 8px;
+    cursor: pointer;
+}
+
+.divA > div > details > div > div img {
+    height: 20px;
+}
+
+div.details summary {
+    background-color: black;
+    color: white;
+}
+
+div.details summary:active {
+    background-color: yellow;
+    color: blue;
+}
+
+.divA summary {
+    cursor: pointer;
+}
+
+details div div {
+    margin: 5px;
+}
+
+
+input[type='number']{
+    width: 100px;
+}

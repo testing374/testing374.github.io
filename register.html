@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>註冊帳號</title>
+    <link rel="stylesheet" href="css/common.css">
+    <script defer src="js/hf.js"></script>
+    <script defer src="js/index.js"></script>
+    <script defer src="js/scollTopBtn.js"></script>
+    <link rel="stylesheet" href="css/login.css">
+    <script defer src="js/login.js"></script>
+</head>
+<body>
+    <header></header>
+    <main>
+      <div class="containerforaccount">
+            <div class="register_appear" id="1">
+                <h2>註冊帳號</h2>
+               
+            <form action="" method="get">
+                <fieldset class="accountblock">
+                    <p>                    
+                <label for="account name">帳戶名稱:</label>
+                <input type="text" name="account name" autocomplete="on" autofocus required>
+                </p>
+                <p>
+                <label for="account password">密碼:</label>
+                <input type="password" name="account password"  minlength="8" autocomplete="on" autofocus required>
+            </p>
+                <p> 
+                <label for="gender">性別:</label>
+                <input type="radio" name="gender" id="Man">男
+                <input type="radio" name="gender" id="woman">女
+                </p>
+                <p>
+                    <label for="birthday">生日</label>
+                    <input type="date" id="date"  autofocus required>
+                </p>
+                <p>
+                <label for="email address">電郵地址:</label>
+                <input type="email" name="email address" autocomplete="on" autofocus required>               
+                </p>    
+                <button class="confirm">確認</button>                
+            </form>
+            </fieldset>
+                </div>
+                <div class="otherblock">
+                已有帳戶?  <a href="login.html"><button class="login">登入</button></a>
+                    忘記密碼?  <a href="reset.html"><button class="forgot">重設</button></a>
+              
+             </div>
+            </div> 
+    </main>
+    <footer></footer>
+</body>
+</html>

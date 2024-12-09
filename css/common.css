@@ -1,0 +1,216 @@
+/*    目錄
+  root variable
+  *
+  body
+  header
+  footer
+  carousel
+*/
+
+:root {
+  --widthL: 1000px;
+  --zIndexMax: 99;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  /*   border: 1px black solid; */
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header{
+  max-width: var(--widthL);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: var(--zIndexMax);
+  background-color: white;
+  opacity: 0.9;
+
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+header>div{
+  /* max-width: var(--widthL); */
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+header>div p{
+  font-size: larger;
+  font-weight: bolder;
+}
+
+header>div>a{
+  flex: 0 0 100px;
+
+}
+
+header span a:hover{
+  color: blue;
+  box-shadow: 0 3px 5px lightblue;
+}
+
+header #hLogReg{
+  flex: 0 1 900px;
+}
+header #hLogReg>span{
+  float: right;
+}
+
+/* .dropdown {
+  position: relative;
+  display: inline-block;
+} */
+
+/* .dropdown-content {
+
+  position: relative;
+  
+  background-color: #f6f6f6;
+  min-width: 230px;
+ 
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content div{
+  position: absolute;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 5px;
+  text-decoration: none;
+  display: none;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+ */
+
+
+
+/* header>div>input{
+  height: 30px;
+  flex: 1 1 auto;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+
+header>div>datalist~img{
+  width: 50px;
+  height: 50px;
+} */
+
+header>div>span>a{
+  font-weight: bold;
+}
+
+nav>span{
+  position: relative;
+  font-weight: bold;
+}
+
+/* nav>span>table{
+  display: none;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 200px;
+  background-color: aliceblue;
+} */
+/* 
+nav th{
+  text-align: left;
+}
+
+nav td, nav th {
+  padding: 5px;
+}
+ */
+/* hr{
+  max-width: var(--widthL);
+} */
+
+
+footer{
+  max-width: var(--widthL);
+  width: 100%;
+}
+
+footer img{
+  width: 50px;
+  height: auto;
+}
+
+/* footer>div{} */
+
+footer>div.ft2{
+
+  background-color: grey;
+}
+
+footer div.ft2 span{
+  float:right;
+ 
+}
+
+
+.carousel{
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-list{
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  transition-duration: 300ms;
+}
+.carousel-btn{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: greenyellow;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  left: 30px;
+}
+
+.carousel-item{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.carousel-item:hover{
+  border: 1px black solid;
+}
+
+.carousel-item>img{
+  width: 230px;
+
+}
+
+.carousel-item>span{
+  border: 1px black solid;
+  border-radius: 20px;
+
+}

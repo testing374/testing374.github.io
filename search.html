@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>尋找商品</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/search.css">
+    <script defer src="js/hf.js"></script>
+    <script src="data/product.js"></script>
+    <script src="js/lib.js"></script>
+    <script defer src="js/search.js"></script>
+    <script defer src="js/scollTopBtn.js"></script>
+</head>
+
+<body>
+    <header></header>
+    <main>
+
+        <div class="divAB">
+            <div class="divA">
+          
+                <div class="brand">
+                    <details>
+                        <summary><strong>品牌</strong></summary>
+                        <input type="radio" name="br" value="1" id="br1">
+                        <label for="br1">Timberland</label>
+                        <br>
+                        <input type="radio" name="br" value="2" id="br2">
+                        <label for="br2">Vans</label>
+                        <br>
+                        <input type="radio" name="br" value="3" id="br3">
+                        <label for="br3">BOSS</label>
+                        <br>
+                        <input type="radio" name="br" value="4" id="br4">
+                        <label for="br4">ADIDAS</label>
+                        <br>
+                        <input type="radio" name="br" value="5" id="br5">
+                        <label for="br5">ZARA</label>
+                        <br>
+                        <input type="radio" name="br" value="6" id="br6">
+                        <label for="br6">Reebok</label> 
+                        <br>
+                        <input type="radio" name="br" value="7" id="br7">
+                        <label for="br7">Projet1826</label>
+                        <br>
+                        <input type="radio" name="br" value="8" id="br8">
+                        <label for="br8">WALK London</label>
+                    </details>
+                </div>
+
+                <br>
+
+                <div class="type">
+                    <details>
+                        <summary><strong>類別</strong></summary>
+                        <div class="box">
+                            <input type="radio" name="ty" value="1" id="type1">
+                            <label for="type1">輕便鞋</label>
+                            <br>
+                            <input type="radio" name="ty" value="2" id="type2">
+                            <label for="type2">正式鞋</label>
+                            <br>
+                            <input type="radio" name="ty" value="3" id="type3">
+                            <label for="type3">涼鞋及拖鞋</label>
+                            <br>
+                            <input type="radio" name="ty" value="4" id="type4">
+                            <label for="type4">運動鞋</label>
+                        </div>
+                    </details>
+                </div>
+                <br>
+                <div class="size">
+                    <details>
+                        <summary><strong>尺碼</strong></summary>
+
+                        <div class="box">
+                            <span>40</span>
+                            <span>41</span>
+                            <span>42</span>
+                            <span>43</span>
+                            <span>44</span>
+                            <span>45</span>
+                            <span>46</span>
+                        </div>
+                    </details>
+                </div>
+                <br>
+
+                <div class="price">
+                    <details>
+                        <summary><strong>價格</strong></summary>
+                        <div class="box">
+                            <input type="number" id="minp" placeholder="最低價">
+                            <strong><span>-</span></strong>
+                            <input type="number" id="maxp" placeholder="最高價">
+                        </div>
+                    </details>
+                </div>
+                <br>
+                <div id="filterBtn"><summary><strong>篩選</strong></summary></div>
+      
+            </div>
+
+            <div class="divB">
+                <nav>
+                    <code></code>
+                    <span id="sortBtn">排序&#8593;&#8595;
+                        <div>
+                            <span>價錢由低至高</span>
+                            <span>價錢由高至低</span>
+                            <span>瀏覽次數由低至高</span>
+                            <span>瀏覽次數由高至低</span>
+                        </div>
+                    </span>
+                </nav>
+
+                <div class="pList"></div>
+            </div>
+
+    </main>
+    <footer></footer>
+</body>
+
+</html>

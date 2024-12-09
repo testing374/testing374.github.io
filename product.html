@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <script src="data/product.js"></script>
+    <script src="js/lib.js"></script>
+    <script defer src="js/hf.js"></script>
+    <script defer src="js/scollTopBtn.js"></script>
+
+<style>
+
+        main img{ width: 200px }
+        main .containerAdmin{
+            display: flex;
+            flex-direction: row;
+        }
+        main table{ margin: 10px; }
+        main td{
+            padding-bottom: 4px;
+        }
+        main button{
+            font-size: larger;
+            font-weight: bold;
+            margin-top: 10px;
+            width: 100px;
+            height: 40px;
+        }
+
+        /* 尺碼格子 */
+        main .box>span:hover{
+            box-shadow: 0 3px 5px lightblue;
+            border: 2px outset black;
+            cursor: pointer;
+        }
+
+        main .box>span{
+            border: 1px outset blue;
+            padding: 3px;
+            margin: 2px;
+            border-radius: 1px;
+            font-size: large;
+            margin-right: 10px;
+        }
+
+@media only screen and (max-width: 650px){
+    main .containerAdmin{ flex-direction: column;}
+}
+</style>
+
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <div class="container"></div>
+    </main>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        let p = productList[params.get('p') - 1];
+        if (typeof p == 'undefined') {
+            setTimeout(() => { window.location.href = 'empty_cart.html'; }, 1000);
+        }
+        const ca = document.createElement('div');
+        ca.classList.add('containerAdmin');
+        ca.innerHTML = `
+                <div class="card_lef">
+                    <table>
+                        <tr><td><h1><u>${brandName[p.b_id - 1]}</u></h1></td></tr>
+                        <tr><td><h2>${p.name}</h2></td></tr>
+                        <tr><td><h3>HK$ ${p.price}</h3></td></tr>
+                        <tr><td><h4>尺碼</h4></td></tr>
+                        <tr><td><div class="box">
+                            ${p['size'].map(s=>`<span>${s}</span>`).join('')}
+                        </div></td></tr>
+                        <tr><td>
+                            <a href='checkout.html'>    
+                            <button class="add">購買 <i class="fa-solid fa-cart-shopping"></i> </button>
+                            </a>
+                        </td></tr>
+                    </table>
+                </div>
+                        <div class="photocard">
+                            <table>
+                            <tr>
+            <td><img class="photocardimg" src="img/shoe/${brand[p.b_id - 1]}-${p.img}-1.jpg"></td>
+            <td><img class="photocardimg" src="img/shoe/${brand[p.b_id - 1]}-${p.img}-2.jpg"></td>
+            </tr>
+            <tr>
+            <td><img class="photocardimg" src="img/shoe/${brand[p.b_id - 1]}-${p.img}-3.jpg"></td>
+            <td><img class="photocardimg" src="img/shoe/${brand[p.b_id - 1]}-${p.img}-4.jpg"></td>
+            </tr>
+            </table>
+                        </div>
+                `;
+        document.getElementsByClassName('container')[0].appendChild(ca);
+        sizeBoxes('.box>span');
+    </script>
+    <footer></footer>
+    </body>
+    
+    </html>

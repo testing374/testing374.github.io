@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="https://static-hk.zacdn.com/css/release/alice-hkfas-core-e18eaa111415e14c3c2d.css">
+    <link rel="stylesheet" href="https://static-hk.zacdn.com/css/release/alice-hkfas-checkout_redesign-d825a7cf8c23374526c3.css">
+    <script defer src="js/hf.js"></script>
+    <script defer src="js/scollTopBtn.js"></script>
+
+</head>
+
+<body>
+    <header style="display: none;"></header>
+    <h4><u>shoolay</u></h4>
+    <main style="border: 1px black solid">
+        <div class="payment__form__wrapper form-stacked">
+            <div class="cc__info">
+                <span class="cc__info-label mrm">我們接受  <img style='width:50px' src="img/icon_visa.png" alt="">
+                    <img style='width:50px'src="img/icon_mastercard.png" alt=""></span>
+            </div>
+            <div class="cc_form-wrapper">
+                <div class="form-stacked__group">
+                    <label for="cc__card">
+                        信用卡號碼 </label>
+                    <div class="box">
+                        <input id="cc__card" type="text" class="form-stacked__input fluid" name="CreditcardForm[card]"
+                            autocomplete="off"
+                            data-error="Invalid Card Number, please try again and enter it carefully."
+                            data-encrypted-name="number">
+                    </div>
+                </div>
+                <div class="form-stacked__group box">
+                    <div class="form-stacked__half">
+                        <label for="cc__expiry">
+                            有效期至 (MM/YYYY) </label>
+                        <div class="box">
+                            <select name="CreditcardForm[cc_exp_month]" class="cc__exp_month" autocomplete="off"
+                                data-position="left"
+                                data-error="Invalid date, please try again or check your credit card expiration date."
+                                data-encrypted-name="expiryMonth" id="CreditcardForm_cc_exp_month">
+                                <option value="" selected="selected">MM</option>
+                                <option value="1">01</option>
+                                <option value="2">02</option>
+                                <option value="3">03</option>
+                                <option value="4">04</option>
+                                <option value="5">05</option>
+                                <option value="6">06</option>
+                                <option value="7">07</option>
+                                <option value="8">08</option>
+                                <option value="9">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select> &nbsp;/&nbsp;
+                            <select name="CreditcardForm[cc_exp_year]" class="cc__exp_year" autocomplete="off"
+                                data-position="left"
+                                data-error="Invalid date, please try again or check your credit card expiration date."
+                                data-encrypted-name="expiryYear" id="CreditcardForm_cc_exp_year">
+                                <option value="" selected="selected">YYYY</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                                <option value="2031">2031</option>
+                                <option value="2032">2032</option>
+                                <option value="2033">2033</option>
+                                <option value="2034">2034</option>
+                                <option value="2035">2035</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-stacked__half">
+                        <label for="cc_cvc">
+                            安全碼
+                        </label>
+                        <div class="box">
+                            <input id="cc__cvc" name="CreditcardForm[cvc]" type="text" class="form-stacked__input s70"
+                                placeholder="" pattern="\d*" autocomplete="off"
+                                data-error="Invalid Security Code, please try again and enter it carefully."
+                                data-encrypted-name="cvc">
+    
+                        </div>
+                        <div class="cc__info-box">
+                            <a class="js-cvv__info-toggle"><i class="icon_close-medium-light rfloat"></i></a>
+                            <img src="https://static-hk.zacdn.com/images/local/checkout/cc_info-02112015.jpg">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="form-stacked__group">
+                    <label for="cc__holder">
+                        持卡者姓名 </label>
+                    <div class="box">
+                        <input id="cc__holder" name="CreditcardForm[holder]" type="text"
+                            class="form-stacked__input fluid" autocomplete="off" data-error="Name on Card is required。"
+                            data-encrypted-name="holderName">
+                        <input type="hidden" id="cc__type" name="CreditcardForm[type]"
+                            class="form-stacked__input fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="form__action-payment">
+
+                <div class="js-billing_content"></div>
+                <button type="submit"
+                    class="btn btn--medium btn--fluid mbxl js-set_payment sel-checkout__save-continue-button"
+                    title="CONTINUE">
+                    繼續 </button>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>

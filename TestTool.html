@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>這是測試工具不是專案的一部分 90%或以上可視為完成</title>
+</head>
+<body>
+<h4>進度表 16頁</h4>
+<table></table>
+<script>
+const a = ['index',100, 'search',90,'product',90,  'empty_cart',100, 'checkout',90];
+const b = ['register',90,'login',90, 'reset',100];
+const c= ['contact',100,'question',100,'about',100,'terms-of-use',100,'privacy',100];
+const d=['admin_login',100,'admin',100,'admin_pindex',100];
+
+const body = document.querySelector('table');
+[a,b,c,d].forEach( x => {
+    for (let i = 0 ; i < x.length; i+=2){
+        const k = document.createElement('tr');
+        k.href = x[i] + '.html';
+        k.innerHTML = `<td><a href='${x[i]}.html''>` + x[i] + '</a></td><td>' + x[i+1] + '%</td>';
+        if ( x[i+1] == 100 ) k.style.backgroundColor = 'bisque';
+        body.appendChild(k);
+    }
+});
+
+</script>
+<style>
+    td{border: 1px solid grey};
+</style>
+</body>
+</html>

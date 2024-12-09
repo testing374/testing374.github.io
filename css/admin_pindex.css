@@ -1,0 +1,47 @@
+.photocardimg{
+    max-height: 150px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.containerAdmin{
+    display: flex  ;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    background-color: rgb(245, 245, 180);
+}
+
+.adminMain{
+    width: 900px;
+    border: 3px solid pink; 
+    align-items: center;
+}
+
+.containerTop{
+   text-align: center;
+}
+
+.photocard{
+    width: 55%;
+    justify-content: center;
+    margin: 10px;
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.card_lef{
+    align-content: center;
+    width: 35%;
+    margin: 15px;
+    font-size: 16px;
+}
+
+body{
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+} 
+
+p{line-height: 40%;}

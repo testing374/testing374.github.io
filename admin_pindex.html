@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>產品目錄</title>
+    <link rel="stylesheet" href="css/admin_pindex.css">
+    <script src="data/product.js"></script>
+    <script defer src="js/scollTopBtn.js"></script>
+</head>
+
+<body>
+    <div class="adminMain">
+        <div class="containerTop">
+            <h1>產品目錄</h1>
+            <a href="admin.html">
+                <h4>回到管理員主頁</h4>
+            </a>
+        </div>
+    </div>
+    <script>
+productList.forEach( p => {
+    const ca = document.createElement('div');
+    ca.classList.add('containerAdmin');
+    ca.innerHTML = `
+    <div class="card_lef">
+                <p>產品編號: ${p.p_id} </p>
+                <p>產品名稱: ${p.name} </p>
+                <p>類型: ${shoeType[p.type-1]} </p>
+                <p>價格: $${p.price}</p>
+                <p>尺碼: ${p.size} </p>
+                <p>瀏覽次數: ${p.view} </p>
+                <p>品牌: ${brandName[p.b_id-1]} </p>
+            </div>
+            <div class="photocard">
+${[1,2,3,4].map(i=>`<img class="photocardimg" src="img/shoe/${brand[p.b_id-1]}-${p.img}-${i}.jpg">`).join('')}    
+            </div>
+    `;
+    document.getElementsByClassName('adminMain')[0].appendChild(ca);
+});
+    </script>
+</body>
+</html>

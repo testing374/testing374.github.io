@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入帳戶</title>
+    <link rel="stylesheet" href="css/common.css">
+    <script defer src="js/hf.js"></script>
+    <script defer src="js/index.js"></script>
+    <script defer src="js/scollTopBtn.js"></script>
+    <link rel="stylesheet" href="css/login.css">
+    <script defer src="js/login.js"></script>
+</head>
+<body>
+    <header></header>
+    <main>
+      <div class="containerforaccount">
+            <div class="register_appear" id="1">
+                <h2>登入帳戶</h2>
+               
+            <form action="" method="get">
+                <fieldset class="accountblock">
+                    <p>                    
+                <label for="account name">帳戶名稱:</label>
+                <input type="text" name="account name" autocomplete="on" autofocus required>
+                </p>
+
+                <p>
+                <label for="account password">帳戶密碼:</label>
+                <input type="password" name="account password"  minlength="8" autocomplete="on" autofocus required>
+            </p>
+  
+                <input type="checkbox" class="checkbox">保持登入 
+                <button class="confirm">登入</button>   
+            </form>
+            </fieldset>
+            
+                </div>
+                <div class="otherblock">
+             未有帳號?  <a href="register.html"><button class="register">註冊</button></a>
+                    忘記密碼?  <a href="reset.html"><button class="forgot">重設</button></a>
+             </div>
+            </div> 
+    </main>
+    <footer></footer>
+</body>
+</html>

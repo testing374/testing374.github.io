@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理員主頁</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <script src="js/lib.js"></script>
+    <script defer src="js/scollTopBtn.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script defer src="js/admin.js"></script>
+</head>
+
+<body>
+    <main>
+        <h1>🖥訂單</h1>        
+        
+        <table>
+            <tr>
+                <th>帳單編號</th>
+                <th>顧客ID</th>
+                <th>產品ID</th>
+                <th>購物日期</th>
+                <th>送貨地址</th>
+                <th>價錢</th>
+            </tr>
+
+            <tr>
+                <td>1️⃣</td>
+                <td>2</td>
+                <td><p>1</p></td>
+                <td>11月20日</td>
+                <td>Flat 10/F, Heaven House, Choi Hung</td>
+                <td>$1,000</td>
+            </tr>
+
+            <tr>
+                <td>2️⃣</td>
+                <td>3</td>
+                <td>3</td>
+                <td>12月1日</td>
+                <td>456 Moonlight Drive, Star City</td>
+                <td>$1,500</td>
+            </tr>
+
+            <tr>
+                <td>3️⃣</td>
+                <td>4</td>
+                <td>5</td>
+                <td>10月15日</td>
+                <td>78 Sunny Boulevard, Bright Town</td>
+                <td>$2,000</td>
+            </tr>
+            
+            <tr>
+                <td>4️⃣</td>
+                <td>5</td>
+                <td>6</td>
+                <td>11月5日</td>
+                <td>910 Cloud Avenue, Sky City</td>
+                <td>$1,200</td>
+            </tr>
+            
+            <tr>
+                <td>5️⃣</td>
+                <td>2</td>
+                <td>3</td>
+                <td>9月25日</td>
+                <td>21 Rainbow Street, Color City</td>
+                <td>$1,800</td>
+            </tr>
+            
+            <tr>
+                <td>6️⃣</td>
+                <td>3</td>
+                <td>5</td>
+                <td>8月10日</td>
+                <td>100 Sunshine Road, Bright City</td>
+                <td>$1,600</td>
+            </tr>
+
+            
+            <tr>
+                <td>7️⃣</td>
+                <td>6</td>
+                <td>7</td>
+                <td>7月22日</td>
+                <td>55 Ocean Drive, Sea Town</td>
+                <td>$1,400</td>
+            </tr>
+        </table>
+        <br>
+        <span><strong>商品瀏覽數分析</strong></span>
+        <canvas id="myChart" style="width:100%;max-width:1000px"></canvas>
+        <br>
+        <a href="admin_pindex.html"><strong>所有產品清單</strong></a>
+        <br><br>
+        <button>登出</button>
+</main>
+<br>
+</body>
+</html>
