@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旅遊資訊網</title>
+    <link rel="icon" href="img/logo.gif">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/data.js"></script>
+    <script defer src="js/nav.js"></script>
+</head>
+<body>
+    <div id="navRightList">
+        <div>
+        <a href="index.html">首頁</a>
+        <a href="finland.html">芬蘭</a>
+        <a href="france.html">法國</a>
+        <a href="singapore.html">新加坡</a>
+        <a href="russia.html">俄羅斯</a>
+        <a id="nrlBack">返回</a>
+        </div>
+    </div>
+    <nav>
+        <a href="index.html">
+            <img id='logoNameImg' src="img/logoName.png" alt="">
+        </a>
+        <div id="navLong">
+            <a href="index.html">首頁</a>
+            <a href="finland.html">芬蘭</a>
+            <a href="france.html">法國</a>
+            <a href="singapore.html">新加坡</a>
+            <a href="russia.html">俄羅斯</a>
+        </div>
+        <span id="rListBtn"><img src="img/hamburger.webp"></span>
+    </nav>
+
+    <main>
+    <div class="container">
+        <!-- large images -->
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+      
+        <div class="row"> <!-- small images -->  </div>
+    </div>
+    <link rel="stylesheet" href="css/slideShowGallery.css">
+    <script src="js/slideShowGallery.js"></script>
+    </main>
+
+      <footer>
+        <code>&copy;旅遊資訊網 2024&nbsp;</code>
+      </footer>
+</body>
+</html>
