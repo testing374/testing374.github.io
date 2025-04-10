@@ -1,0 +1,131 @@
+@import url(index.css);
+
+:root{
+    --mainWidth: 800px;
+    --picWidth: 600px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: var(--mainWidth);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+section{
+    display: flex;
+    margin: 10px;
+    align-items: center;
+}
+
+.grid-item1{
+    flex: 0 0 150px;
+}
+.grid-item1>img{
+    width: 90%;
+    border: 2px black solid;
+}
+.grid-item2{
+    flex: 1 1 auto;
+    max-width: 600px;
+    height: fit-content;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-weight: 550;
+}
+.grid-item3{
+    justify-content: flex-start;
+    min-height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.grid-item3 img{
+    width: 250px;
+    height: 250px;
+}
+
+.gridImg{
+    position: relative;
+    width: max-content;
+}
+
+.gridImg:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+.gridImg h4{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 3px;
+
+}
+
+#hideTop>div{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 99;
+    width: var(--picWidth);
+    height: fit-content;
+    border: 2px whitesmoke solid;
+}
+
+#hideTop{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 98;
+}
+
+#hideTop>div>div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: -99;
+}
+
+#hideTop img{
+    height: max-content;
+    width: calc(var(--picWidth) - 4px);
+    float: left;
+}
+
+
+footer{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: right;
+}
+
+
+@media screen and (max-width: 800px) {
+    .grid-item3{
+        justify-content: center;
+    }
+}
+
+nav>a{
+    background-color: white;
+}
